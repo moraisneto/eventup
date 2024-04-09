@@ -81,7 +81,7 @@ export function AttendeeList() {
                     3 dias atrás
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
-                    <IconButton transparent={true}>
+                    <IconButton transparent>
                       <MoreHorizontal className="size-4" />
                     </IconButton>
                   </td>
