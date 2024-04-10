@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { IconButton } from "./icon-button";
 import { Table } from "./table/table";
+import { TableHeader } from "./table/table-header";
+import { TableCell } from "./table/table-cell";
 
 export function AttendeeList() {
   return (
@@ -25,63 +27,45 @@ export function AttendeeList() {
       <Table>
         <thead>
           <tr className="border-b border-white/10">
-            <th
-              style={{ width: 48 }}
-              className="py-3 px-4 text-sm font-semibold text-left"
-            >
+            <TableHeader style={{ width: 48 }}>
               <input
                 className="size-4 bg-black/20 rounded border border-white/10"
                 type="checkbox"
               />
-            </th>
-            <th className="py-3 px-4 text-sm font-semibold text-left">
-              Código
-            </th>
-            <th className="py-3 px-4 text-sm font-semibold text-left">
-              Participantes
-            </th>
-            <th className="py-3 px-4 text-sm font-semibold text-left">
-              Data da inscrição
-            </th>
-            <th className="py-3 px-4 text-sm font-semibold text-left">
-              Data do check-in
-            </th>
-            <th
-              style={{ width: 64 }}
-              className="py-3 px-4 text-sm font-semibold text-left"
-            ></th>
+            </TableHeader>
+            <TableHeader>Código</TableHeader>
+            <TableHeader>Participantes</TableHeader>
+            <TableHeader>Data da inscrição</TableHeader>
+            <TableHeader>Data do check-in</TableHeader>
+            <TableHeader style={{ width: 64 }}></TableHeader>
           </tr>
         </thead>
         <tbody>
           {Array.from({ length: 8 }).map((_, i) => {
             return (
               <tr key={i} className="border-b border-white/10 hover:bg-white/5">
-                <td className="py-3 px-4 text-sm text-zinc-300">
+                <TableCell>
                   <input
                     className="size-4 bg-black/20 rounded border border-white/10"
                     type="checkbox"
                   />
-                </td>
-                <td className="py-3 px-4 text-sm text-zinc-300">12383</td>
-                <td className="py-3 px-4 text-sm text-zinc-300">
+                </TableCell>
+                <TableCell>12383</TableCell>
+                <TableCell>
                   <div className="flex flex-col gap-1">
                     <span className="font-semibold text-white">
                       José Morais Neto
                     </span>
                     <span>joseorais@gmail.com</span>
                   </div>
-                </td>
-                <td className="py-3 px-4 text-sm text-zinc-300">
-                  7 dias atrás
-                </td>
-                <td className="py-3 px-4 text-sm text-zinc-300">
-                  3 dias atrás
-                </td>
-                <td className="py-3 px-4 text-sm text-zinc-300">
+                </TableCell>
+                <TableCell>7 dias atrás</TableCell>
+                <TableCell>3 dias atrás</TableCell>
+                <TableCell>
                   <IconButton transparent>
                     <MoreHorizontal className="size-4" />
                   </IconButton>
-                </td>
+                </TableCell>
               </tr>
             );
           })}
