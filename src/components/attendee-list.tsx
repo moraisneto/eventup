@@ -72,10 +72,8 @@ export function AttendeeList() {
         </tbody>
         <tfoot>
           <tr>
-            <td className="py-3 px-4 text-sm text-zinc-300" colSpan={3}>
-              Mostrando 10 de 238 itens
-            </td>
-            <td
+            <TableCell colSpan={3}>Mostrando 10 de 238 itens</TableCell>
+            <TableCell
               className="py-3 px-4 text-sm text-zinc-300 text-right"
               colSpan={3}
             >
@@ -96,7 +94,7 @@ export function AttendeeList() {
                   </IconButton>
                 </div>
               </div>
-            </td>
+            </TableCell>
           </tr>
         </tfoot>
       </Table>
